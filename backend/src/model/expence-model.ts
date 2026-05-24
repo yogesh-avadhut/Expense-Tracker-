@@ -24,10 +24,13 @@ const expencesSchema = new mongoose.Schema({
     status: {
         type: String,
         required: true,
-        enum: ["active","inactive"],
+        enum: ["active", "inactive"],
         default: "active"
     }
-})
+}
+ , {
+        timestamps: true
+    })
 
 const expencesModel = mongoose.model("expencesModel", expencesSchema)
 
